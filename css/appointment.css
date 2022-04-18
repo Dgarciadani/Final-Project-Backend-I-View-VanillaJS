@@ -1,0 +1,439 @@
+@import url("https://use.typekit.net/hdb4hwe.css");
+
+body {
+  background-color: #91c5e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: fenwick, sans-serif;
+}
+
+header {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.search {
+  display: flex;
+}
+
+header button {
+  background-color: #f7f9fb;
+  color: #302125;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 8px;
+  transition: all 0.2s ease-in-out;
+  /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  width: 150px;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+button:hover {
+  background-color: #1f628c;
+  color: #ffffff;
+}
+
+.active {
+  background-color: #1f628c;
+  color: #ffffff;
+}
+
+header input {
+  background-color: f7f9fb;
+  color: #302125;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  color: #000;
+  min-height: 150px;
+}
+.container_patient {
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+.container_patient input {
+  border: 1px solid #e5e9f8;
+  border-radius: 5px;
+  font-family: fenwick, sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  height: 25px;
+}
+
+.user_data {
+  display: flex;
+  justify-content: space-around;
+}
+.user_data i {
+  color: #80787b;
+  font-family: fenwick, sans-serif;
+  font-weight: 200;
+}
+.user_data p {
+  color: #000;
+  font-style: normal;
+}
+.profile_data {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: c;
+  align-items: center;
+  margin: 50px;
+  margin-top: 60px;
+  margin-left: 70px;
+  transition: all 0.2s ease-in-out;
+}
+.profile_data img {
+  margin: 10px;
+  margin-bottom: 50px;
+  max-width: 110px;
+  max-height: 110px;
+  border-radius: 100%;
+}
+.user p {
+  color: #a3a0a1;
+  font-family: fenwick, sans-serif;
+  font-weight: 10px;
+  font-style: italic;
+  margin-top: -15px;
+  margin-left: 5px;
+}
+.user {
+  margin: 10px;
+  /* background-color: #302125; */
+}
+.dentist-data button {
+  background-color: f7f9fb;
+  color: #302125;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  width: 150px;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.dentist-data button:hover {
+  background-color: #659dbf;
+  color: #f7f9fb;
+}
+
+.appointments_data {
+  background-color: #f7f9fb;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 50%;
+  border-radius: 0px 10px 10px 0px;
+  min-height: 150px;
+}
+
+.appo_list {
+  list-style: none;
+  width: 80%;
+  max-height: 80%;
+  border: 1px solid #302125;
+  border-radius: 10px;
+  text-align: left;
+  background-color: #659dbf;
+  margin-bottom: 50px;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.appo_table {
+  border: none;
+}
+.appo_table th {
+  padding-top: 100px;
+  padding: 10px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: #fcf8f4;
+  font-family: fenwick, sans-serif;
+}
+.appo_table tr {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: #fcf8f4;
+  font-family: fenwick, sans-serif;
+}
+.appo_table td {
+  margin-top: 20px;
+  margin-bottom: 120px;
+  color: #fcf8f4;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+footer {
+  margin-top: 30px;
+  width: 80%;
+  transition: all 0.2s ease-in-out;
+}
+footer h3 {
+  color: white;
+}
+footer button {
+  background: rgba(241, 241, 241, 0.5);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px;
+  transition: all 0.2s ease-in-out;
+  width: 150px;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+footer button:hover {
+  background-color: #1f628c;
+  color: #f7f9fb;
+}
+.Search-all {
+  background-color: #659dbf;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  transition: 1s;
+}
+.all-list button {
+  width: 100%;
+  color: white;
+}
+.all-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* background-color:red; */
+  width: 100%;
+  margin-left: -40px;
+}
+.editButtons {
+  display: flex;
+}
+.editButtons button {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+footer th {
+  color: #fcf8f4;
+  font-family: fenwick, sans-serif;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+footer td {
+  color: #fcf8f4;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: fenwick, sans-serif;
+  font-style: italic;
+}
+table button {
+  max-width: 30px;
+  margin-right: 40px;
+}
+.btn-td {
+  /* background-color: red; */
+  align-items: right;
+  text-align: right;
+  justify-content: right;
+}
+.appointment_data {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  margin-left: 20px;
+  /* background-color:red */
+}
+
+.appointment_data button {
+  background-color: #659dbf;
+  color: #f7f9fb;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  width: 150px;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.patient-data {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+  transition: all 0.2s ease-in-out;
+  /* background-color:gold; */
+  width: 50%;
+  margin-left: 80px;
+}
+.patient-data p {
+  margin-top: 5px;
+}
+.dentist-data p {
+  margin-top: 5px;
+}
+.patient-data select {
+  border: none;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  padding: 10px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #659dbf;
+  color: white;
+}
+.dentist-data select {
+  border: none;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  padding: 10px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #659dbf;
+  color: white;
+}
+
+.dentist-data {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+  transition: all 0.2s ease-in-out;
+  /* background-color:green; */
+  width: 50%;
+  margin-bottom: 40px;
+}
+.app-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #659dbf;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.app-data button {
+  background-color: white;
+  color: rgb(39, 38, 38);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  min-width: 35px;
+  max-width: 180px;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+.app-data button:hover {
+  background-color: #1f628c;
+  color: #f7f9fb;
+}
+.app-data input {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 100px;
+}
+.btn-group {
+  display: flex;
+  flex-direction: row;
+}
+.btn-group #X {
+  width: 35px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+}
+#X:hover {
+  background-color: #ca3d3d;
+  color: #f7f9fb;
+}
+.patient-btn button {
+  color: white;
+}
+.appointment_data i {
+  color: #80787b;
+  font-family: fenwick, sans-serif;
+  font-weight: 200;
+}
+.btn-group {
+  display: flex;
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+}
+.btn-group button:hover {
+  background-color: #ca3d3d;
+  color: #f7f9fb;
+}
+.dentist-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  /* background-color:green; */
+  width: 50%;
+}
+.patient-select {
+  margin-bottom: 40px;
+}
