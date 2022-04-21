@@ -282,6 +282,7 @@ window.addEventListener("load", () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Cookie": "JSESSIONID=126B3AED8949411E4A4B02ABF9407176"
       },
       body: JSON.stringify(newData),
     };
