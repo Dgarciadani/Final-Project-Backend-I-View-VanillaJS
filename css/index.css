@@ -19,7 +19,23 @@ header {
 .search {
   display: flex;
 }
+.search button {
+  height: 38px;
+}
 
+.search-button{
+   background-image: url("../src/lupaB.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px ;
+  width: 45px;
+}
+.search button:hover[type="submit"] {
+  background-image: url("../src/lupaW.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px ;
+}
 header button {
   background-color: #f7f9fb;
   color: #302125;
@@ -45,11 +61,13 @@ button:hover {
 }
 
 header input {
-  background-color: #f7f9fb;
+  background-color: f7f9fb;
   color: #302125;
   border: none;
   border-radius: 15px;
   padding: 10px;
+  padding-top: 15px;
+  padding-bottom: -10px;
   margin: 10px;
 }
 
@@ -61,6 +79,8 @@ main {
   border-radius: 10px;
   width: 80%;
   color: #000;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
 }
 .container_patient {
   height: 100%;
@@ -232,6 +252,8 @@ footer button:hover {
   flex-direction: column;
   margin-top: 20px;
   transition: 1s;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
 }
 .all-list button {
   width: 100%;
