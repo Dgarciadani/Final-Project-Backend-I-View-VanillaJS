@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
   const findAllBtn = document.querySelector(".btn-findall");
   const allAppointments_space = document.querySelector(".all-list");
   const newAppointmentBtn = document.querySelector(".btn-add");
+  const logOutBtn = document.querySelector(".logOutBtn");
   const hours = [
     "10:00",
     "10:30",
@@ -35,7 +36,21 @@ window.addEventListener("load", () => {
       document.querySelector(".btn-appointments").classList.add("active");
     }
   };
+
   actualLocation();
+
+  
+  logOutBtn.addEventListener("click", () => {
+    confirm("Are you sure you want to log out?") ?  logOut():null
+  
+  })
+
+  const logOut=()=>{
+    localStorage.removeItem("jwt");
+    alert("See you soon!");
+    window.location.href = "index.html";
+  }
+
 
   document.querySelector(".btn-patients").addEventListener("click", () => {
     window.location.href = "patient.html";

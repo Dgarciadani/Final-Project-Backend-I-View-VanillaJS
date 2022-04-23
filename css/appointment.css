@@ -418,7 +418,6 @@ table button {
   align-items: center;
   text-align: center;
   justify-content: center;
-  
 }
 .btn-group button:hover {
   background-color: #ca3d3d;
@@ -436,4 +435,32 @@ table button {
 }
 .patient-select {
   margin-bottom: 40px;
+}
+
+button > img {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.logOut {
+  /* background-color: #ed5e0a; */
+  width: 100%;
+  align-self: end;
+  margin-top: 10px;
+  text-align: right;
+  margin-bottom: -40px;
+}
+.logOut button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 45px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 35px;
+  border-radius: 15px;
+}
+.logOut button:hover {
+  background-color: #11111121;
+  color: #f7f9fb;
 }

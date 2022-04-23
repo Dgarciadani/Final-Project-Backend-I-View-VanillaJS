@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
   const findAllBtn = document.querySelector(".btn-findall");
   const allDentist_space = document.querySelector(".all-list");
   const newDentistBtn = document.querySelector(".btn-add");
+  const logOutBtn = document.querySelector(".logOutBtn");
+
 
   const actualLocation = () => {
     if (window.location.pathname === "/patient.html") {
@@ -17,6 +19,17 @@ window.addEventListener("load", () => {
     }
   };
   actualLocation();
+
+  logOutBtn.addEventListener("click", () => {
+    confirm("Are you sure you want to log out?") ?  logOut():null
+  
+  })
+
+  const logOut=()=>{
+    localStorage.removeItem("jwt");
+    alert("See you soon!");
+    window.location.href = "index.html";
+  }
 
   document.querySelector(".btn-patients").addEventListener("click", () => {
     window.location.href = "patient.html";
