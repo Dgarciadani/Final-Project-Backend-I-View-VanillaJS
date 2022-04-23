@@ -35,28 +35,38 @@ window.addEventListener("load", () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: raw,
-        redirect: "follow",
       };
 
-      fetch("http://localhost:8080/auth/login", requestOptions).then((response) => {
-        if (response.ok) {
-          alert("Logged in");
-          window.location.href = "patient.html";
-        } else {
-          alert("Wrong username or password");
-        }
-      });
+      fetch(urlRoot + "auth/authenticate", requestOptions)
+        //then the response contain the token jwt
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.jwt) {
+            localStorage.setItem("jwt", data.jwt);
+            console.log(data.jwt);
+            alert("You are logged in");
+            window.location.href = "./appointment.html";
+          } else {
+            alert("Wrong username or password");
+          }
+        });
     });
 
     signup.addEventListener("click", () => {
       inputs_area.innerHTML = `
-      <input type="email" placeholder="Email" id="email">
+      <input type="email" placeholder="Email" id="email" autocomplete="off"
+      >
       <input type="text" placeholder="firstname" id="firstname">
-      <input type="text" placeholder="Username" id="username" >
-        <input type="password" placeholder="Password" id="password">
+      <input type="text" placeholder="Username" id="username" autocomplete="off"
+      >
+        <input type="password" placeholder="Password" id="password" autocomplete="off"
+        >
         <input type="password" placeholder="Confirm Password" id="confirm_password">
-        <button class="logbton" id="login">SignUp</button>`;
-        
+        <div>  
+        <button class="logbton" id="login">Log In</button>
+        <button class="logbton" id="login">SignUp</button>
+    
+        </div>`;
     });
   };
   renderLogInInputs();

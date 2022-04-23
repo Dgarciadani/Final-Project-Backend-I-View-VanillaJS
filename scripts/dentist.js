@@ -158,12 +158,15 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "dentist/id=" + id, settings)
       .then((response) => {
         if (response.ok) {
           return response.json();
+        }else if (response.status === 404) {
+          alert("Dentist not found");
         }
         throw new Error(response.statusText);
       })
@@ -207,6 +210,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/dentist=" + id, settings)
@@ -229,6 +233,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "dentist/all", settings)
@@ -258,6 +263,7 @@ window.addEventListener("load", () => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify(newData),
     };
@@ -282,7 +288,7 @@ window.addEventListener("load", () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
-        "Cookie": "JSESSIONID=126B3AED8949411E4A4B02ABF9407176"
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify(newData),
     };
@@ -378,6 +384,7 @@ window.addEventListener("load", () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "dentist/id=" + id, settings).then((response) => {
@@ -395,6 +402,7 @@ window.addEventListener("load", () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/dentist=" + id, settings).then((response) => {

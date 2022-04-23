@@ -274,6 +274,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "dentist/all", settings)
@@ -293,6 +294,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "patient/all", settings)
@@ -313,12 +315,15 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/id=" + id, settings)
       .then((response) => {
         if (response.ok) {
           return response.json();
+        }else if (response.status === 404){
+          alert("Appointment not found");
         }
         throw new Error(response.statusText);
       })
@@ -330,9 +335,7 @@ window.addEventListener("load", () => {
         renderDentisData(appointment);
         renderAppointmentData(appointment);
       })
-      .catch((err) => {
-        alert(err);
-      });
+     
   };
 
   const renderAllAppointments = (appointments) => {
@@ -375,6 +378,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/all", settings)
@@ -402,6 +406,7 @@ window.addEventListener("load", () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify(newAppointment),
     };
@@ -426,6 +431,7 @@ window.addEventListener("load", () => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify(newappointment),
     };
@@ -452,6 +458,7 @@ window.addEventListener("load", () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/id=" + id, settings).then((response) => {

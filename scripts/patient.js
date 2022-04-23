@@ -207,6 +207,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "patient/id=" + id, settings)
@@ -232,6 +233,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "patient/email=" + email, settings)
@@ -257,6 +259,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/patient=" + id, settings)
@@ -285,6 +288,7 @@ window.addEventListener("load", () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "patient/all", settings)
@@ -315,6 +319,7 @@ window.addEventListener("load", () => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify(newData),
     };
@@ -340,6 +345,7 @@ window.addEventListener("load", () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify(newData),
     };
@@ -399,7 +405,7 @@ window.addEventListener("load", () => {
         deleteAppointments(id)
       }
     } else {
-      confirm("Are you sure you want to delete?") && deletePatient(id);
+      confirm("Are you sure you want to delete?") && deleteUser(id);
         
     }
   };
@@ -409,6 +415,7 @@ window.addEventListener("load", () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "patient/id=" + id, settings).then((response) => {
@@ -466,6 +473,7 @@ window.addEventListener("load", () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     };
     fetch(urlRoot + "appointment/patient=" + id, settings)

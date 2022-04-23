@@ -85,6 +85,23 @@ main {
   background-position: 10px;
   padding-left: 25px;
 }
+.inputs input[type="email"] {
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #e0dedf;
+  background-color: #ffffff;
+  color: #444444;
+  font-family: fenwick, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 10px;
+  background: url(../src/id-badge-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 10px;
+  padding-left: 25px;
+}
 .inputs input[type="password"] {
   width: 60%;
   height: 40px;
